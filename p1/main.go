@@ -4,6 +4,8 @@ import (
 	// "encoding/json"
     "fmt"
     "math/rand"
+    // "github.com/go-gota/gota/dataframe"
+    // "github.com/go-gota/gota/series"
     // "io/ioutil"
     // "log"
     // "net/http"
@@ -34,6 +36,13 @@ type language struct {
 func add_mini(x int, y int) int{
 	return x + y
 }
+
+func random_price_generator(curr_price float64) float64 {
+    var new_price float64
+    new_price = curr_price + rand.Float64()
+    fmt.Println(rand.Float64())
+    return new_price
+}
 // // A Response struct to map the Entire Response
 // type Response struct {
 //     Name    string    `json:"name"`
@@ -52,32 +61,33 @@ func add_mini(x int, y int) int{
 // }
 
 func main() {
-	m := add_mini(5, 6)
-	fmt.Println(m)
+	// m := add_mini(5, 6)
+	// fmt.Println(m)
 
-	var newAlbum album
-	// var myslice []int
+	// var newAlbum album
+	// // var myslice []int
 
-	newAlbum = album{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99}
-    albums = append(albums, newAlbum)
-    // fmt.Println(albums)
-    fmt.Println(rand.Intn(100))
+	// newAlbum = album{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99}
+ //    albums = append(albums, newAlbum)
+ //    // fmt.Println(albums)
+ //    fmt.Println(rand.Intn(100))
 
-    for num := 1; num <= 100; num++ {
-    	if num == 10 {
-    		fmt.Println(num)
-    	}
+ //    for num := 1; num <= 100; num++ {
+ //    	if num == 10 {
+ //    		fmt.Println(num)
+ //    	}
 
-    }
+ //    }
 
-    nums := []int{2, 3, 4}
-    for i, num := range nums {
-    	fmt.Println(i, " ", num)
-    }
+    // nums := []int{2, 3, 4}
+    // for i, num := range nums {
+    // 	fmt.Println(i, " ", num)
+    // }
 
     var python language
     python = language{NAME: "python", Popularity: 100}
     fmt.Println(python)
+    random_price_generator(5)
 
 
     // response, err := http.Get("http://pokeapi.co/api/v2/pokedex/kanto/")

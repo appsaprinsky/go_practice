@@ -1,0 +1,4 @@
+https://gobyexample.com/random-numbers
+
+https://www.freecodecamp.org/news/exploratory-data-analysis-in-go-with-gota/
+
